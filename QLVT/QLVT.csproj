@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FE1FAE35-F580-4143-89FA-2117D7BED2DF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>QLVT</RootNamespace>
+    <AssemblyName>QLVT</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1" />
+    <Reference Include="DevExpress.XtraBars.v17.1" />
+    <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.XtraEditors.v17.1" />
+    <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSetQLVT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetQLVT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSDH.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSDH.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSMK.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMK.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSMVT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSMVT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DSVT.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DSVT.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDH.Designer.cs">
+      <DependentUpon>FormDH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDonDatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDonDatHang.Designer.cs">
+      <DependentUpon>FormDonDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormKho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKho.Designer.cs">
+      <DependentUpon>FormKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhanVien.Designer.cs">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNhapHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNhapHang.Designer.cs">
+      <DependentUpon>FormNhapHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormVatTu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVatTu.Designer.cs">
+      <DependentUpon>FormVatTu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXuatHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXuatHang.Designer.cs">
+      <DependentUpon>FormXuatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLVT_DHDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLVT_DHDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDonDatHang.resx">
+      <DependentUpon>FormDonDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKho.resx">
+      <DependentUpon>FormKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhanVien.resx">
+      <DependentUpon>FormNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNhapHang.resx">
+      <DependentUpon>FormNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVatTu.resx">
+      <DependentUpon>FormVatTu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXuatHang.resx">
+      <DependentUpon>FormXuatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="DataSetQLVT.xsc">
+      <DependentUpon>DataSetQLVT.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetQLVT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetQLVT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataSetQLVT.xss">
+      <DependentUpon>DataSetQLVT.xsd</DependentUpon>
+    </None>
+    <None Include="DSDH.xsc">
+      <DependentUpon>DSDH.xsd</DependentUpon>
+    </None>
+    <None Include="DSDH.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSDH.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSDH.xss">
+      <DependentUpon>DSDH.xsd</DependentUpon>
+    </None>
+    <None Include="DSMK.xsc">
+      <DependentUpon>DSMK.xsd</DependentUpon>
+    </None>
+    <None Include="DSMK.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMK.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSMK.xss">
+      <DependentUpon>DSMK.xsd</DependentUpon>
+    </None>
+    <None Include="DSMVT.xsc">
+      <DependentUpon>DSMVT.xsd</DependentUpon>
+    </None>
+    <None Include="DSMVT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSMVT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSMVT.xss">
+      <DependentUpon>DSMVT.xsd</DependentUpon>
+    </None>
+    <None Include="DSVT.xsc">
+      <DependentUpon>DSVT.xsd</DependentUpon>
+    </None>
+    <None Include="DSVT.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DSVT.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DSVT.xss">
+      <DependentUpon>DSVT.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="QLVT_DHDataSet.xsc">
+      <DependentUpon>QLVT_DHDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLVT_DHDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLVT_DHDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLVT_DHDataSet.xss">
+      <DependentUpon>QLVT_DHDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BaoCao\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

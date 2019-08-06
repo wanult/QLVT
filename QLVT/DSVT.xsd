@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DSVT" targetNamespace="http://tempuri.org/DSVT.xsd" xmlns:mstns="http://tempuri.org/DSVT.xsd" xmlns="http://tempuri.org/DSVT.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QLVT_DHConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QLVT_DHConnectionString3 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QLVT.Properties.Settings.GlobalReference.Default.QLVT_DHConnectionString3" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="V_DSVTTableAdapter" GeneratorDataComponentClassName="V_DSVTTableAdapter" Name="V_DSVT" UserDataComponentName="V_DSVTTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QLVT_DHConnectionString3 (Settings)" DbObjectName="QLVT_DH.dbo.V_DSVT" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT MAVT FROM dbo.V_DSVT</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MAVT" DataSetColumn="MAVT" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DSVT" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DSVT" msprop:Generator_UserDSName="DSVT">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="V_DSVT" msprop:Generator_TableClassName="V_DSVTDataTable" msprop:Generator_TableVarName="tableV_DSVT" msprop:Generator_TablePropName="V_DSVT" msprop:Generator_RowDeletingName="V_DSVTRowDeleting" msprop:Generator_RowChangingName="V_DSVTRowChanging" msprop:Generator_RowEvHandlerName="V_DSVTRowChangeEventHandler" msprop:Generator_RowDeletedName="V_DSVTRowDeleted" msprop:Generator_UserTableName="V_DSVT" msprop:Generator_RowChangedName="V_DSVTRowChanged" msprop:Generator_RowEvArgName="V_DSVTRowChangeEvent" msprop:Generator_RowClassName="V_DSVTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MAVT" msprop:Generator_ColumnVarNameInTable="columnMAVT" msprop:Generator_ColumnPropNameInRow="MAVT" msprop:Generator_ColumnPropNameInTable="MAVTColumn" msprop:Generator_UserColumnName="MAVT">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:V_DSVT" />
+      <xs:field xpath="mstns:MAVT" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
