@@ -367,5 +367,11 @@ namespace QLVT
                 nhanVienTableAdapter.Fill(dataSetQLVT.NhanVien);
             }
         }
+
+        private void btnTaoLogin_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            FormTaoLogin form = new FormTaoLogin();
+            form.Show();
+        }
     }
 }

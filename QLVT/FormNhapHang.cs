@@ -203,6 +203,9 @@ namespace QLVT
                     groupBox.Enabled = groupBoxCT.Enabled = false;
                     btnThemPN.Enabled = btnXoaPN.Enabled = phieuNhapGridControl.Enabled = 
                         cTPNGridControl.Enabled = btnThemCTPN.Enabled =true;
+                    txtMaDH.Items.Clear();
+                    txtMaDH.Items.Add("");
+                    txtMaDH.SelectedItem = 0;
                 }
             }
         }

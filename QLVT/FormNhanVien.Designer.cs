@@ -324,6 +324,7 @@
             this.btnTaoLogin.Id = 8;
             this.btnTaoLogin.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTaoLogin.ImageOptions.Image")));
             this.btnTaoLogin.Name = "btnTaoLogin";
+            this.btnTaoLogin.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.btnTaoLogin_ItemClick);
             // 
             // bar2
             // 

@@ -67,6 +67,8 @@
             this.lbMaNV = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbTenNV = new System.Windows.Forms.ToolStripStatusLabel();
             this.lbNhom = new System.Windows.Forms.ToolStripStatusLabel();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup4 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             ((System.ComponentModel.ISupportInitialize)(this.ribbonControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.statusStrip1.SuspendLayout();
@@ -101,7 +103,8 @@
             this.ribbonControl1.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
             this.ribbonHeThong,
             this.ribbonPage2,
-            this.ribbonPage3});
+            this.ribbonPage3,
+            this.ribbonPage1});
             this.ribbonControl1.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2010;
             this.ribbonControl1.Size = new System.Drawing.Size(758, 143);
             this.ribbonControl1.Click += new System.EventHandler(this.ribbonControl1_Click);
@@ -342,6 +345,18 @@
             this.lbNhom.Size = new System.Drawing.Size(47, 17);
             this.lbNhom.Text = "Nhóm: ";
             // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup4});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            // 
+            // ribbonPageGroup4
+            // 
+            this.ribbonPageGroup4.Name = "ribbonPageGroup4";
+            this.ribbonPageGroup4.Text = "ribbonPageGroup4";
+            // 
             // FormMain
             // 
             this.AllowFormGlass = DevExpress.Utils.DefaultBoolean.False;
@@ -404,6 +419,8 @@
         private System.Windows.Forms.ToolStripStatusLabel lbMaNV;
         private System.Windows.Forms.ToolStripStatusLabel lbTenNV;
         private System.Windows.Forms.ToolStripStatusLabel lbNhom;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup4;
     }
 }
 
