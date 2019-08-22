@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKho));
             System.Windows.Forms.Label mAKHOLabel;
             System.Windows.Forms.Label tENKHOLabel;
             System.Windows.Forms.Label dIACHILabel;
             System.Windows.Forms.Label mACNLabel;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormKho));
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar1 = new DevExpress.XtraBars.Bar();
             this.btnThemKho = new DevExpress.XtraBars.BarButtonItem();
@@ -48,6 +48,9 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cbxCNKho = new System.Windows.Forms.ComboBox();
+            this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qLVT_DHDataSet = new QLVT.QLVT_DHDataSet();
             this.lbCNKho = new System.Windows.Forms.Label();
             this.dataSetQLVT = new QLVT.DataSetQLVT();
             this.bdsKho = new System.Windows.Forms.BindingSource(this.components);
@@ -60,36 +63,70 @@
             this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBoxKho = new System.Windows.Forms.GroupBox();
+            this.btnHuyEdit = new System.Windows.Forms.Button();
+            this.btnEditKho = new System.Windows.Forms.Button();
+            this.txtCNKHO = new DevExpress.XtraEditors.TextEdit();
+            this.txtDCKho = new DevExpress.XtraEditors.TextEdit();
+            this.txtTENKHO = new DevExpress.XtraEditors.TextEdit();
+            this.txtMAKHO = new DevExpress.XtraEditors.TextEdit();
             this.btnHuyKho = new System.Windows.Forms.Button();
             this.btnOKKho = new System.Windows.Forms.Button();
-            this.txtMAKHO = new DevExpress.XtraEditors.TextEdit();
-            this.txtTENKHO = new DevExpress.XtraEditors.TextEdit();
-            this.txtDCKho = new DevExpress.XtraEditors.TextEdit();
-            this.txtCNKHO = new DevExpress.XtraEditors.TextEdit();
-            this.btnEditKho = new System.Windows.Forms.Button();
-            this.qLVT_DHDataSet = new QLVT.QLVT_DHDataSet();
-            this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.v_DSPMTableAdapter = new QLVT.QLVT_DHDataSetTableAdapters.V_DSPMTableAdapter();
             this.tableAdapterManager1 = new QLVT.QLVT_DHDataSetTableAdapters.TableAdapterManager();
-            this.cbxCNKho = new System.Windows.Forms.ComboBox();
             mAKHOLabel = new System.Windows.Forms.Label();
             tENKHOLabel = new System.Windows.Forms.Label();
             dIACHILabel = new System.Windows.Forms.Label();
             mACNLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLVT_DHDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetQLVT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.groupBoxKho.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMAKHO.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTENKHO.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDCKho.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCNKHO.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLVT_DHDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDCKho.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTENKHO.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMAKHO.Properties)).BeginInit();
             this.SuspendLayout();
+            // 
+            // mAKHOLabel
+            // 
+            mAKHOLabel.AutoSize = true;
+            mAKHOLabel.Location = new System.Drawing.Point(25, 49);
+            mAKHOLabel.Name = "mAKHOLabel";
+            mAKHOLabel.Size = new System.Drawing.Size(47, 13);
+            mAKHOLabel.TabIndex = 2;
+            mAKHOLabel.Text = "MAKHO:";
+            // 
+            // tENKHOLabel
+            // 
+            tENKHOLabel.AutoSize = true;
+            tENKHOLabel.Location = new System.Drawing.Point(21, 93);
+            tENKHOLabel.Name = "tENKHOLabel";
+            tENKHOLabel.Size = new System.Drawing.Size(51, 13);
+            tENKHOLabel.TabIndex = 4;
+            tENKHOLabel.Text = "TENKHO:";
+            // 
+            // dIACHILabel
+            // 
+            dIACHILabel.AutoSize = true;
+            dIACHILabel.Location = new System.Drawing.Point(290, 49);
+            dIACHILabel.Name = "dIACHILabel";
+            dIACHILabel.Size = new System.Drawing.Size(47, 13);
+            dIACHILabel.TabIndex = 6;
+            dIACHILabel.Text = "DIACHI:";
+            // 
+            // mACNLabel
+            // 
+            mACNLabel.AutoSize = true;
+            mACNLabel.Location = new System.Drawing.Point(290, 97);
+            mACNLabel.Name = "mACNLabel";
+            mACNLabel.Size = new System.Drawing.Size(40, 13);
+            mACNLabel.TabIndex = 8;
+            mACNLabel.Text = "MACN:";
             // 
             // barManager1
             // 
@@ -227,6 +264,29 @@
             this.panel1.Size = new System.Drawing.Size(804, 50);
             this.panel1.TabIndex = 4;
             // 
+            // cbxCNKho
+            // 
+            this.cbxCNKho.DataSource = this.v_DSPMBindingSource;
+            this.cbxCNKho.DisplayMember = "description";
+            this.cbxCNKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCNKho.FormattingEnabled = true;
+            this.cbxCNKho.Location = new System.Drawing.Point(95, 14);
+            this.cbxCNKho.Name = "cbxCNKho";
+            this.cbxCNKho.Size = new System.Drawing.Size(235, 21);
+            this.cbxCNKho.TabIndex = 2;
+            this.cbxCNKho.ValueMember = "subscriber_server";
+            this.cbxCNKho.SelectedIndexChanged += new System.EventHandler(this.cbxCNKho_SelectedIndexChanged);
+            // 
+            // v_DSPMBindingSource
+            // 
+            this.v_DSPMBindingSource.DataMember = "V_DSPM";
+            this.v_DSPMBindingSource.DataSource = this.qLVT_DHDataSet;
+            // 
+            // qLVT_DHDataSet
+            // 
+            this.qLVT_DHDataSet.DataSetName = "QLVT_DHDataSet";
+            this.qLVT_DHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lbCNKho
             // 
             this.lbCNKho.AutoSize = true;
@@ -323,6 +383,7 @@
             // 
             // groupBoxKho
             // 
+            this.groupBoxKho.Controls.Add(this.btnHuyEdit);
             this.groupBoxKho.Controls.Add(this.btnEditKho);
             this.groupBoxKho.Controls.Add(mACNLabel);
             this.groupBoxKho.Controls.Add(this.txtCNKHO);
@@ -341,6 +402,65 @@
             this.groupBoxKho.TabIndex = 7;
             this.groupBoxKho.TabStop = false;
             this.groupBoxKho.Text = "Thông tin Kho";
+            // 
+            // btnHuyEdit
+            // 
+            this.btnHuyEdit.Location = new System.Drawing.Point(303, 162);
+            this.btnHuyEdit.Name = "btnHuyEdit";
+            this.btnHuyEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnHuyEdit.TabIndex = 11;
+            this.btnHuyEdit.Text = "Hủy";
+            this.btnHuyEdit.UseVisualStyleBackColor = true;
+            this.btnHuyEdit.Visible = false;
+            this.btnHuyEdit.Click += new System.EventHandler(this.btnHuyEdit_Click);
+            // 
+            // btnEditKho
+            // 
+            this.btnEditKho.Location = new System.Drawing.Point(206, 162);
+            this.btnEditKho.Name = "btnEditKho";
+            this.btnEditKho.Size = new System.Drawing.Size(75, 23);
+            this.btnEditKho.TabIndex = 10;
+            this.btnEditKho.Text = "Edit";
+            this.btnEditKho.UseVisualStyleBackColor = true;
+            this.btnEditKho.Visible = false;
+            this.btnEditKho.Click += new System.EventHandler(this.btnEditKho_Click);
+            // 
+            // txtCNKHO
+            // 
+            this.txtCNKHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKho, "MACN", true));
+            this.txtCNKHO.Enabled = false;
+            this.txtCNKHO.Location = new System.Drawing.Point(356, 90);
+            this.txtCNKHO.MenuManager = this.barManager1;
+            this.txtCNKHO.Name = "txtCNKHO";
+            this.txtCNKHO.Size = new System.Drawing.Size(212, 20);
+            this.txtCNKHO.TabIndex = 9;
+            // 
+            // txtDCKho
+            // 
+            this.txtDCKho.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKho, "DIACHI", true));
+            this.txtDCKho.Location = new System.Drawing.Point(356, 46);
+            this.txtDCKho.MenuManager = this.barManager1;
+            this.txtDCKho.Name = "txtDCKho";
+            this.txtDCKho.Size = new System.Drawing.Size(212, 20);
+            this.txtDCKho.TabIndex = 7;
+            // 
+            // txtTENKHO
+            // 
+            this.txtTENKHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKho, "TENKHO", true));
+            this.txtTENKHO.Location = new System.Drawing.Point(78, 90);
+            this.txtTENKHO.MenuManager = this.barManager1;
+            this.txtTENKHO.Name = "txtTENKHO";
+            this.txtTENKHO.Size = new System.Drawing.Size(149, 20);
+            this.txtTENKHO.TabIndex = 5;
+            // 
+            // txtMAKHO
+            // 
+            this.txtMAKHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKho, "MAKHO", true));
+            this.txtMAKHO.Location = new System.Drawing.Point(78, 46);
+            this.txtMAKHO.MenuManager = this.barManager1;
+            this.txtMAKHO.Name = "txtMAKHO";
+            this.txtMAKHO.Size = new System.Drawing.Size(149, 20);
+            this.txtMAKHO.TabIndex = 3;
             // 
             // btnHuyKho
             // 
@@ -364,101 +484,6 @@
             this.btnOKKho.Visible = false;
             this.btnOKKho.Click += new System.EventHandler(this.btnOKKho_Click);
             // 
-            // mAKHOLabel
-            // 
-            mAKHOLabel.AutoSize = true;
-            mAKHOLabel.Location = new System.Drawing.Point(25, 49);
-            mAKHOLabel.Name = "mAKHOLabel";
-            mAKHOLabel.Size = new System.Drawing.Size(47, 13);
-            mAKHOLabel.TabIndex = 2;
-            mAKHOLabel.Text = "MAKHO:";
-            // 
-            // txtMAKHO
-            // 
-            this.txtMAKHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKho, "MAKHO", true));
-            this.txtMAKHO.Enabled = false;
-            this.txtMAKHO.Location = new System.Drawing.Point(78, 46);
-            this.txtMAKHO.MenuManager = this.barManager1;
-            this.txtMAKHO.Name = "txtMAKHO";
-            this.txtMAKHO.Size = new System.Drawing.Size(149, 20);
-            this.txtMAKHO.TabIndex = 3;
-            // 
-            // tENKHOLabel
-            // 
-            tENKHOLabel.AutoSize = true;
-            tENKHOLabel.Location = new System.Drawing.Point(21, 93);
-            tENKHOLabel.Name = "tENKHOLabel";
-            tENKHOLabel.Size = new System.Drawing.Size(51, 13);
-            tENKHOLabel.TabIndex = 4;
-            tENKHOLabel.Text = "TENKHO:";
-            // 
-            // txtTENKHO
-            // 
-            this.txtTENKHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKho, "TENKHO", true));
-            this.txtTENKHO.Location = new System.Drawing.Point(78, 90);
-            this.txtTENKHO.MenuManager = this.barManager1;
-            this.txtTENKHO.Name = "txtTENKHO";
-            this.txtTENKHO.Size = new System.Drawing.Size(149, 20);
-            this.txtTENKHO.TabIndex = 5;
-            // 
-            // dIACHILabel
-            // 
-            dIACHILabel.AutoSize = true;
-            dIACHILabel.Location = new System.Drawing.Point(290, 49);
-            dIACHILabel.Name = "dIACHILabel";
-            dIACHILabel.Size = new System.Drawing.Size(47, 13);
-            dIACHILabel.TabIndex = 6;
-            dIACHILabel.Text = "DIACHI:";
-            // 
-            // txtDCKho
-            // 
-            this.txtDCKho.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKho, "DIACHI", true));
-            this.txtDCKho.Location = new System.Drawing.Point(356, 46);
-            this.txtDCKho.MenuManager = this.barManager1;
-            this.txtDCKho.Name = "txtDCKho";
-            this.txtDCKho.Size = new System.Drawing.Size(212, 20);
-            this.txtDCKho.TabIndex = 7;
-            // 
-            // mACNLabel
-            // 
-            mACNLabel.AutoSize = true;
-            mACNLabel.Location = new System.Drawing.Point(290, 97);
-            mACNLabel.Name = "mACNLabel";
-            mACNLabel.Size = new System.Drawing.Size(40, 13);
-            mACNLabel.TabIndex = 8;
-            mACNLabel.Text = "MACN:";
-            // 
-            // txtCNKHO
-            // 
-            this.txtCNKHO.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.bdsKho, "MACN", true));
-            this.txtCNKHO.Enabled = false;
-            this.txtCNKHO.Location = new System.Drawing.Point(356, 90);
-            this.txtCNKHO.MenuManager = this.barManager1;
-            this.txtCNKHO.Name = "txtCNKHO";
-            this.txtCNKHO.Size = new System.Drawing.Size(212, 20);
-            this.txtCNKHO.TabIndex = 9;
-            // 
-            // btnEditKho
-            // 
-            this.btnEditKho.Location = new System.Drawing.Point(206, 162);
-            this.btnEditKho.Name = "btnEditKho";
-            this.btnEditKho.Size = new System.Drawing.Size(75, 23);
-            this.btnEditKho.TabIndex = 10;
-            this.btnEditKho.Text = "Edit";
-            this.btnEditKho.UseVisualStyleBackColor = true;
-            this.btnEditKho.Visible = false;
-            this.btnEditKho.Click += new System.EventHandler(this.btnEditKho_Click);
-            // 
-            // qLVT_DHDataSet
-            // 
-            this.qLVT_DHDataSet.DataSetName = "QLVT_DHDataSet";
-            this.qLVT_DHDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // v_DSPMBindingSource
-            // 
-            this.v_DSPMBindingSource.DataMember = "V_DSPM";
-            this.v_DSPMBindingSource.DataSource = this.qLVT_DHDataSet;
-            // 
             // v_DSPMTableAdapter
             // 
             this.v_DSPMTableAdapter.ClearBeforeFill = true;
@@ -468,19 +493,6 @@
             this.tableAdapterManager1.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager1.Connection = null;
             this.tableAdapterManager1.UpdateOrder = QLVT.QLVT_DHDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // cbxCNKho
-            // 
-            this.cbxCNKho.DataSource = this.v_DSPMBindingSource;
-            this.cbxCNKho.DisplayMember = "description";
-            this.cbxCNKho.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCNKho.FormattingEnabled = true;
-            this.cbxCNKho.Location = new System.Drawing.Point(95, 14);
-            this.cbxCNKho.Name = "cbxCNKho";
-            this.cbxCNKho.Size = new System.Drawing.Size(235, 21);
-            this.cbxCNKho.TabIndex = 2;
-            this.cbxCNKho.ValueMember = "subscriber_server";
-            this.cbxCNKho.SelectedIndexChanged += new System.EventHandler(this.cbxCNKho_SelectedIndexChanged);
             // 
             // FormKho
             // 
@@ -495,23 +507,23 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormKho";
-            this.Text = "FormKho";
+            this.Text = "Form Kho";
             this.Load += new System.EventHandler(this.FormKho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qLVT_DHDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetQLVT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bdsKho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.groupBoxKho.ResumeLayout(false);
             this.groupBoxKho.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtMAKHO.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTENKHO.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDCKho.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtCNKHO.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLVT_DHDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDCKho.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTENKHO.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtMAKHO.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -557,5 +569,6 @@
         private QLVT_DHDataSetTableAdapters.V_DSPMTableAdapter v_DSPMTableAdapter;
         private QLVT_DHDataSetTableAdapters.TableAdapterManager tableAdapterManager1;
         private System.Windows.Forms.ComboBox cbxCNKho;
+        private System.Windows.Forms.Button btnHuyEdit;
     }
 }

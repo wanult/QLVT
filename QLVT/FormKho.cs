@@ -108,18 +108,10 @@ namespace QLVT
 
         private void btnRefreshKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            try
-            {
                 this.khoTableAdapter.Fill(this.dataSetQLVT.Kho);
                 groupBoxKho.Enabled = false;
                 btnEditKho.Visible = btnOKKho.Visible = btnHuyKho.Visible = false;
                 khoGridControl.Enabled = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi Reload :" + ex.Message, "", MessageBoxButtons.OK);
-                return;
-            }
         }
 
         private void btnLuuKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -137,8 +129,8 @@ namespace QLVT
             btnThemKho.Enabled = btnSuaKho.Enabled = btnXoaKho.Enabled = btnRefreshKho.Enabled
                 = btnExitKho.Enabled  = khoGridControl.Enabled = false;
             btnLuuKho.Enabled = true;
-            txtMAKHO.Enabled = txtCNKHO.Enabled = btnOKKho.Visible = false;
-            btnEditKho.Visible = btnHuyKho.Visible = true;
+            txtMAKHO.Enabled = txtCNKHO.Enabled = btnOKKho.Visible = btnHuyKho.Visible = false;
+            btnEditKho.Visible = btnHuyEdit.Visible = true;
         }
 
         private void btnThemKho_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -150,16 +142,18 @@ namespace QLVT
             btnThemKho.Enabled = btnXoaKho.Enabled = btnSuaKho.Enabled = khoGridControl.Enabled
                     = btnRefreshKho.Enabled = false;
             btnLuuKho.Enabled = true;
-            btnOKKho.Visible = true;
-            btnHuyKho.Visible = true;
+            btnOKKho.Visible = btnHuyKho.Visible =  true;
             btnEditKho.Visible = false;
         }
 
         private void btnHuyKho_Click(object sender, EventArgs e)
         {
+
+            bdsKho.RemoveCurrent();
             this.bdsKho.EndEdit();
             btnEditKho.Visible = btnHuyKho.Visible = btnOKKho.Visible = false;
             ShowAll();
+            groupBoxKho.Enabled = false;
             return;
         }
 
@@ -169,6 +163,7 @@ namespace QLVT
             this.khoTableAdapter.Update(this.dataSetQLVT.Kho);
             btnOKKho.Visible = btnHuyKho.Visible = btnEditKho.Visible = false;
             ShowAll();
+            groupBoxKho.Enabled = false;
         }
 
         private void btnOKKho_Click(object sender, EventArgs e)
@@ -213,6 +208,7 @@ namespace QLVT
                     bdsKho.ResetCurrentItem();
                     this.khoTableAdapter.Update(this.dataSetQLVT.Kho);
                     btnEditKho.Visible = btnHuyKho.Visible = btnOKKho.Visible = false;
+                    groupBoxKho.Enabled = false;
                     ShowAll();
                 }
             }
@@ -254,6 +250,14 @@ namespace QLVT
                 btnThemKho.Enabled = btnXoaKho.Enabled = btnSuaKho.Enabled = btnLuuKho.Enabled
                     = btnRefreshKho.Enabled = btnExitKho.Enabled = true;
             }
+        }
+
+        private void btnHuyEdit_Click(object sender, EventArgs e)
+        {
+            this.bdsKho.EndEdit();
+            btnEditKho.Visible = btnHuyKho.Visible = btnOKKho.Visible = btnHuyEdit.Visible = false;
+            ShowAll();
+            groupBoxKho.Enabled = false;
         }
     }
 }

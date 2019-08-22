@@ -113,7 +113,8 @@ namespace QLVT
             bdsPN.RemoveCurrent();
             btnOK.Visible = btnHuy.Visible = false;
             groupBox.Enabled = groupBoxCT.Enabled = false;
-            btnThemPN.Enabled = btnXoaPN.Enabled = cTPNGridControl.Enabled = phieuNhapGridControl.Enabled = true;
+            btnThemPN.Enabled = btnXoaPN.Enabled = cTPNGridControl.Enabled = btnThemCTPN.Enabled =
+                phieuNhapGridControl.Enabled = true;
         }
 
         private void btnHuyCT_Click(object sender, EventArgs e)
@@ -204,7 +205,7 @@ namespace QLVT
                     btnThemPN.Enabled = btnXoaPN.Enabled = phieuNhapGridControl.Enabled = 
                         cTPNGridControl.Enabled = btnThemCTPN.Enabled =true;
                     txtMaDH.Items.Clear();
-                    txtMaDH.Items.Add("");
+                    //txtMaDH.Items.Add("");
                     txtMaDH.SelectedItem = 0;
                 }
             }
@@ -298,9 +299,9 @@ namespace QLVT
                     this.cTPNTableAdapter.Update(this.dataSetQLVT.CTPN);
                     btnOKCT.Visible = btnHuyCT.Visible = false;
                     groupBox.Enabled = groupBoxCT.Enabled = btnThemPN.Enabled = btnXoaPN.Enabled = false;
-                    phieuNhapGridControl.Enabled = btnThemCTPN.Enabled = true;
-
+                    phieuNhapGridControl.Enabled = btnThemCTPN.Enabled = btnThemPN.Enabled = btnXoaPN.Enabled = true;             
                     
+
                     this.cTPNTableAdapter.Fill(this.dataSetQLVT.CTPN);
 
 
@@ -309,6 +310,10 @@ namespace QLVT
                 "@MAVT = N'" + txtMAVT.Text + "', " + " @SL = N'" + Convert.ToInt32(temp) + "' SELECT  'Return Value' = @return_value";
                     myReader1 = Program.ExecSqlDataReader(strlenh1);
                     myReader1.Close();
+
+                    txtMAVT.Items.Clear();
+                    //txtMAVT.Items.Add("");
+                    txtMAVT.SelectedItem = 0;
                 }
                 
             }

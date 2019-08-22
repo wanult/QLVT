@@ -922,7 +922,7 @@
             this.Controls.Add(this.barDockControl2);
             this.Controls.Add(this.barDockControl1);
             this.Name = "FormDonDatHang";
-            this.Text = "FormDonDatHang";
+            this.Text = "Form Đặt Hàng";
             this.Load += new System.EventHandler(this.FormDonDatHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel1.ResumeLayout(false);

@@ -172,7 +172,7 @@ namespace QLVT
                     btnOK.Visible = btnHuy.Visible = false;
                     groupBoxDH.Enabled = groupBoxCTDH.Enabled  = false;
                     btnThemDDH.Enabled = btnXoaDDH.Enabled = btnLuuDDH.Enabled = btnRefreshDDH.Enabled
-                         = true;
+                         = cTDDHGridControl.Enabled = true;
                 }
             }
         }
@@ -351,7 +351,7 @@ namespace QLVT
                     this.cTDDHTableAdapter.Update(this.dataSetQLVT.CTDDH);
                     btnOkCT.Visible = btnHuyCT.Visible = false;
                     groupBoxDH.Enabled = groupBoxCTDH.Enabled = false;
-                    btnThem.Visible = btnXoa.Visible = btnTaiLai.Visible = true;
+                    btnThem.Visible = btnXoa.Visible = btnTaiLai.Visible = datHangGridControl.Enabled = true;
                 }
             }
         }

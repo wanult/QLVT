@@ -808,7 +808,7 @@
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
             this.Name = "FormNhapHang";
-            this.Text = "FormNhapHang";
+            this.Text = "Form Phiếu Nhập";
             this.Load += new System.EventHandler(this.FormNhapHang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.panel1.ResumeLayout(false);
